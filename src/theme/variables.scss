@@ -5,6 +5,11 @@
 // roboto, and noto sans fonts
 $font-path: "../assets/fonts";
 
+@font-face {
+  font-family: 'roboto';
+  src: url('../assets/font/roboto.thin.ttf');//mine
+}
+
 
 // The app direction is used to include
 // rtl styles in your app. For more info, please see:
@@ -38,7 +43,9 @@ $colors: (
   secondary:  #32db64,
   danger:     #f53d3d,
   light:      #f4f4f4,
-  dark:       #222
+  dark:       #222,
+  vibrant:    rebeccapurple,
+  bright:     #ffc125
 );
 
 

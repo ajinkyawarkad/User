@@ -1,30 +1,68 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { ErrorHandler, NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
-import { SplashScreen } from '@ionic-native/splash-screen';
-import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 
+
+import { StatusBar } from '@ionic-native/status-bar';
+import { SplashScreen } from '@ionic-native/splash-screen';
+
+import { TrackCampaignPage } from '../pages/track-campaign/track-campaign';
+import { AccountPage } from '../pages/account/account';
+import { LoginPage } from '../pages/login/login';
+import { RegisterPage } from '../pages/register/register';
+import { ArchivedCampaignsDetailsPage } from '../pages/archived-campaigns-details/archived-campaigns-details';
+import { LeadsDetailsPage } from '../pages/leads-details/leads-details';
+import { TaskDetailsPage } from '../pages/task-details/task-details';
+import { EditCampaignsDetailsPage } from '../pages/edit-campaigns-details/edit-campaigns-details';
+import { EditLeadDetailsPage } from '../pages/edit-lead-details/edit-lead-details';
+import { CallDetailsPage } from '../pages/call-details/call-details';
+
+
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    LoginPage,
+    RegisterPage,
+    HomePage, 
+    TrackCampaignPage,
+    AccountPage,
+    ArchivedCampaignsDetailsPage,
+    LeadsDetailsPage,
+    TaskDetailsPage,
+    EditCampaignsDetailsPage,
+    EditLeadDetailsPage,
+    CallDetailsPage
+   
   ],
   imports: [
+    
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    LoginPage,
+    RegisterPage,
+    HomePage,
+    TrackCampaignPage,
+    AccountPage,
+    ArchivedCampaignsDetailsPage,
+    LeadsDetailsPage,
+    TaskDetailsPage,
+    EditCampaignsDetailsPage,
+    EditLeadDetailsPage,
+    CallDetailsPage
+    
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
-  ]
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule {}
