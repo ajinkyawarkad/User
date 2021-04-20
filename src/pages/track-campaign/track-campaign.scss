@@ -2,12 +2,15 @@ page-track-campaign {
 	ion-content
 	{
 		font-family: 'roboto';
-		font-size: 15px;	
+		font-size: 15px;
+			
 	}
-	th { 
-		background: rgb(70, 69, 69); 
-		color: white; 
-		font-weight: normal; 
+	p{
+		display: inline-block;
+		color: red;
+		height: 1px;
+		margin-top: 2px;
+		margin-left: 28px;
 	}
 	
 	/* Extra small devices (phones, 600px and down) */
@@ -60,8 +63,7 @@ page-track-campaign {
 		
 		
 	}
-	
-	
+		
 	/* Small devices (portrait tablets and large phones, 600px and up) */
 	@media only screen and (min-width: 600px) {
 		table{
@@ -153,10 +155,6 @@ page-track-campaign {
 	
 		}
 	}
-	
-	
-	
-	
 		.button-full-md {
 			margin-left: 23%;
 			margin-right: 0;
@@ -170,25 +168,6 @@ page-track-campaign {
 				width: 50%;
 			}
 	
-	.segment-md .segment-button {
-		
-		font-size: 1.6rem;
-		line-height: 4rem;
-		text-transform:capitalize;
-		color: white;
-		background-color:#488aff;
-		opacity: 0.4;
-		padding: 1px 6px 4px 13px;
-	}
-	.segment-button {
-		text-align: center;
-		position: relative;
-		display: block;
-		overflow: hidden;
-		text-overflow: ellipsis;
-		white-space: nowrap;
-		cursor: pointer;
-	}
 	  
 		table { 
 			width: 100%; 
@@ -200,7 +179,7 @@ page-track-campaign {
 		}
 	   
 		th:nth-child(5){
-			width:15%;
+			width:10%;
 		}
 		th { 
 			background: rgb(70, 69, 69); 

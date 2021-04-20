@@ -5,11 +5,17 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 
+import { firebaseConfig } from '../config';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { TrackCampaignPage } from '../pages/track-campaign/track-campaign';
+import { AuthserviceProvider } from '../providers/authservice/authservice';
+
+
+import { AngularFireModule } from 'angularfire2';
+ import { AngularFireAuth } from 'angularfire2/auth';
 import { AccountPage } from '../pages/account/account';
 import { LoginPage } from '../pages/login/login';
 import { RegisterPage } from '../pages/register/register';
@@ -41,6 +47,8 @@ import { CallDetailsPage } from '../pages/call-details/call-details';
     
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp(firebaseConfig.fire),
+    AngularFireModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -61,7 +69,11 @@ import { CallDetailsPage } from '../pages/call-details/call-details';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    AngularFireAuth,
+    AuthserviceProvider,
+     AngularFireModule,
+    AuthserviceProvider ,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
